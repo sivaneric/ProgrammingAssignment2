@@ -15,6 +15,8 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set=set, get=get, setmatrix=setmatrix, getmatrix=getmatrix)
 }
 
+#cacheSolve returns a matrix that is inverse of the given matrix...if the matrix has already been 
+# cached,it returns the cahed value
 cacheSolve <- function(x=matrix(), ...) {
   m <- x$getmatrix()
   if (!is.null(m)) {
